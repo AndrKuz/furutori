@@ -4,9 +4,11 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+
 	"github.com/gin-gonic/gin"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
+
 	"github.com/AndrKuz/furutori/internal/config"
 )
 
@@ -35,7 +37,7 @@ func main() {
 	r.GET("/api/health", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
 			"status": "ok",
-			"db": "connected",
+			"db":     "connected",
 		})
 	})
 
