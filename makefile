@@ -12,5 +12,9 @@ test:
 lint:
 	golangci-lint run
 
+lint-fix:
+	gofmt -w .
+	goimports -local github.com/AndrKuz/furutori -w .
+
 clean:
 	rm -rf bin/ coverage.out
